@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>롱비엔 CC 사진</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        .slider {
+            position: relative;
+            width: 80%; /* 슬라이더 너비 */
+            margin: 20px auto; /* 가운데 정렬 */
+            overflow: hidden;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 100%;
+        }
+        .slides img {
+            width: 100%;
+            flex-shrink: 0;
+        }
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            font-size: 2rem;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            z-index: 10;
+        }
+        .arrow.left {
+            left: 10px;
+        }
+        .arrow.right {
+            right: 10px;
+        }
+        .back-link {
+            display: block;
+            margin: 20px 0;
+            text-align: center;
+            font-size: 1.2em;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>롱비엔 CC 사진</h1>
+    </header>
+    
+    <section>
+        <div class="slider">
+            <div class="slides">
+                <img src="롱비엔1.jpg" alt="롱비엔 CC 이미지 1">
+                <img src="롱비엔2.jpg" alt="롱비엔 CC 이미지 2">
+                <img src="롱비엔3.jpg" alt="롱비엔 CC 이미지 3">
+                <img src="롱비엔4.jpg" alt="롱비엔 CC 이미지 4">
+            </div>
+            <button class="arrow left" onclick="moveSlide(-1)">&#8249;</button>
+            <button class="arrow right" onclick="moveSlide(1)">&#8250;</button>
+        </div>
+        <a href="./Lao.html" class="back-link">메인 페이지로 돌아가기</a>
+    </section>
+
+    <script>
+        let currentIndex = 0;
+
+        function moveSlide(direction) {
+            const slides = document.querySelector('.slides');
+            const totalSlides = document.querySelectorAll('.slides img').length;
+
+            // Calculate new index
+            currentIndex += direction;
+
+            // Loop to the beginning or end if out of bounds
+            if (currentIndex < 0) {
+                currentIndex = totalSlides - 1;
+            } else if (currentIndex >= totalSlides) {
+                currentIndex = 0;
+            }
+
+            // Move the slides
+            const slideWidth = document.querySelector('.slider').offsetWidth;
+            slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        }
+    </script>
+</body>
+</html>
