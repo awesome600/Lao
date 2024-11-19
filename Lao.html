@@ -9,50 +9,82 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            text-align: center; /* 텍스트 중앙 정렬 */
         }
         header {
             background-color: #4CAF50;
             color: white;
-            text-align: center;
             padding: 1rem;
         }
         section {
             margin: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 80%;
+            margin: 20px auto; /* 가운데 정렬 */
+        }
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 20px;
         }
         .gallery img {
-            width: 100%;
+            width: 30%; /* 대표 이미지 크기를 30%로 조정 */
             height: auto;
-            cursor: pointer;
+            display: block;
+            margin: 10px auto; /* 이미지 가운데 정렬 */
+            border: 1px solid #ddd;
+            border-radius: 10px;
         }
         .contact, .business-info {
             margin-top: 20px;
             background: #f9f9f9;
             padding: 15px;
             border: 1px solid #ddd;
+            text-align: center;
+        }
+        .contact a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contact a:hover {
+            text-decoration: underline;
+        }
+        /* 추가된 공백 설정 */
+        .price-info {
+            margin-bottom: 20px; /* 하단 공백 추가 */
         }
     </style>
 </head>
 <body>
     <header>
         <h1>라오스 디 라이 골프투어</h1>
-        <p>3박 5일 및 4박 6일 맞춤형 골프 투어</p>
+        
     </header>
-    
+	<p>성수기 기준</p>
     <section>
-        <h2>롱비엔 CC</h2>
+        <div class="section-title">3박 5일</div>
+        <p>롱비엔 CC, 레이크뷰 CC, 메콩 CC</p>
+        <p class="price-info">골프 3회: 평일 100달러 / 주말 : 110달러</p>
+        <p class="price-info">호텔: 무엉탄 럭셔리 비엔티안 호텔</p>
+	<p>더 큐브 비엔티안 호텔</p>
+	<p>3박 : 70달러 ~ 85달러</p>
         <div class="gallery">
             <a href="롱비엔_cc.html">
-                <img src="롱비엔 cc/롱비엔1.jpg" alt="롱비엔 CC 대표 이미지">
+                <img src="롱비엔1.jpg" alt="롱비엔 CC 대표 이미지">
             </a>
-            <p>사진을 클릭하면 롱비엔 CC의 모든 사진을 볼 수 있습니다.</p>
+            <p>사진을 클릭하면 롱비엔 CC와 호텔의 사진들을 볼 수 있습니다.</p>
         </div>
     </section>
 
     <section>
-        <h2>호텔</h2>
-        <p>3박: 무엉탄 럭셔리 비엔티안 호텔</p>
-        <p>4박: 추가 계산된 가격으로 투숙 가능</p>
-        <p>추천: 더 큐브 비엔티안 호텔</p>
+        <div class="section-title">4박 6일</div>
+        <p>골프 4회: 롱비엔 CC, 레이크뷰 CC, 메콩 CC, 부영 CC</p>
+        <p>호텔: 무엉탄 럭셔리 비엔티안 호텔</p>
+	<p>더 큐브 비엔티안 호텔</p>
+        <p>4박 6일은 3박 5일과 동일한 코스를 기반으로 추가 비용이 발생합니다.</p>
     </section>
 
     <section class="contact">
@@ -63,9 +95,9 @@
     <footer class="business-info">
         <h3>사업자 정보</h3>
         <p>사업자 등록 번호: 123-45-67890</p>
-        <p>대표자: 홍길동</p>
-        <p>전화번호: 02-123-4567</p>
-        <p>이메일: example@email.com</p>
+        <p>대표: 이 남 두</p>
+        <p>전화번호: 010-9618-4322</p>
+        <p>이메일: han6267@naver.com</p>
     </footer>
 </body>
 </html>
