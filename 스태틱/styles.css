@@ -36,20 +36,19 @@ header {
     padding: 0;
 }
 
-    .nav-menu li a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-    }
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        .nav-menu li a:hover {
-            text-decoration: underline;
-        }
-
+.nav-menu li a:hover {
+    text-decoration: underline;
+}
 
 /* Image Carousel */
 .carousel {
-    height: 500px;
+    height: 400px; /* 기본 크기 */
     position: relative;
     overflow: hidden;
 }
@@ -63,27 +62,27 @@ header {
     transition: opacity 1s ease-in-out;
 }
 
-    .carousel-image.active {
-        opacity: 1;
-    }
+.carousel-image.active {
+    opacity: 1;
+}
 
 /* Hero Section */
 h1 {
-    margin-top: 30px;
+    margin-top: 100px;
     text-align: center;
-    font-size: 48px; 
+    font-size: 36px; /* 기본 크기 */
     color: #003399;
     font-weight: bold;
 }
 
 h2 {
-    font-size: 36px; 
+    font-size: 28px; /* 기본 크기 */
     font-weight: bold;
     color: #003399;
 }
 
 h3 {
-    font-size: 24px;
+    font-size: 20px; /* 기본 크기 */
     font-weight: bold;
     color: #003399;
 }
@@ -109,7 +108,7 @@ p, body {
 }
 
 .tour-item {
-    width: 30%;
+    width: 45%; /* 모바일에서 크기 조정 */
     margin: 20px;
     padding: 10px;
     border: 1px solid #ddd;
@@ -118,68 +117,11 @@ p, body {
     box-sizing: border-box;
 }
 
-    .tour-item img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-    }
-
-    .tour-item h3 {
-        color: #003399;
-    }
-
-/* Tour Detail Section */
-.tour-detail {
-    padding: 50px;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.detail-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.detail-image {
+.tour-item img {
     width: 100%;
-    max-width: 600px;
     height: auto;
     border-radius: 8px;
 }
-
-.tour-info {
-    max-width: 500px;
-    text-align: left;
-}
-
-    .tour-info p {
-        font-size: 18px;
-        line-height: 1.8;
-        margin-bottom: 20px;
-    }
-
-    .tour-info ul {
-        list-style: none;
-        padding: 0;
-        margin-bottom: 20px;
-    }
-
-    .tour-info button {
-        background-color: #003399;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-        .tour-info button:hover {
-            background-color: #0055cc;
-        }
 
 /* About Section */
 #about {
@@ -194,32 +136,32 @@ p, body {
     text-align: center;
 }
 
-    #contact form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-    #contact input, #contact textarea {
-        width: 50%;
-        margin: 10px 0;
-        padding: 10px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-    }
+#contact input, #contact textarea {
+    width: 80%; /* 모바일에서 넓이 증가 */
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
 
-    #contact button {
-        background-color: #003399;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
+#contact button {
+    background-color: #003399;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-        #contact button:hover {
-            background-color: #0055cc;
-        }
+#contact button:hover {
+    background-color: #0055cc;
+}
 
 /* Footer */
 footer {
@@ -229,16 +171,52 @@ footer {
     text-align: center;
 }
 
-    footer a {
-        margin: 0 10px;
-        display: inline-block;
+footer a img {
+    width: 24px;
+    height: 24px;
+}
+
+footer img:hover {
+    opacity: 0.7;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
     }
 
-        footer a img {
-            width: 24px;
-            height: 24px;
-        }
-
-    footer img:hover {
-        opacity: 0.7;
+    .logo {
+        font-size: 20px;
     }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .carousel {
+        height: 300px; /* 모바일 크기 */
+    }
+
+    h1 {
+        font-size: 28px; /* 모바일 크기 */
+    }
+
+    h2 {
+        font-size: 24px; /* 모바일 크기 */
+    }
+
+    h3 {
+        font-size: 18px; /* 모바일 크기 */
+    }
+
+    .tour-item {
+        width: 90%; /* 모바일에서 한 줄에 표시 */
+    }
+
+    #contact input, #contact textarea {
+        width: 90%; /* 입력칸 넓이 증가 */
+    }
+}
