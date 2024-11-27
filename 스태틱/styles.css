@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
@@ -275,3 +276,282 @@ footer img:hover {
         width: 90%; /* 입력칸 넓이 증가 */
     }
 }
+=======
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background-color: #003399;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 18px;
+    color: white;
+    text-align: left;
+}
+
+.nav-menu {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 12px;
+    background-color: #0055cc;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-menu li a:hover {
+    background-color: #003399;
+}
+
+/* Mobile Menu Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .nav-menu {
+        flex-direction: column; /* 세로 정렬 */
+        width: 100%;
+        align-items: center;
+        gap: 5px; /* 메뉴 간격 좁힘 */
+    }
+
+    .nav-menu li a {
+        font-size: 14px; /* 버튼 폰트 크기 */
+        padding: 10px 20px;
+        width: 80%; /* 버튼이 화면에 균형 있게 보이도록 넓이 조정 */
+        text-align: center;
+    }
+}
+/* Mobile-specific Header Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* 세로 정렬 */
+        align-items: center;
+        padding: 10px; /* 패딩 축소 */
+    }
+
+    .logo {
+        font-size: 18px; /* 모바일 로고 크기 축소 */
+        margin-bottom: 10px;
+    }
+
+    .nav-menu {
+        flex-direction: column; /* 메뉴 세로 정렬 */
+        gap: 10px; /* 버튼 간격 줄임 */
+    }
+
+    .nav-menu li a {
+        font-size: 16px; /* 버튼 폰트 크기 증가 */
+        width: 100px; /* 버튼 크기 고정 */
+        text-align: center;
+    }
+}
+
+/* Image Carousel */
+.carousel {
+    height: 400px; /* 기본 크기 */
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel-image.active {
+    opacity: 1;
+}
+
+/* Hero Section */
+h1 {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 36px; /* 기본 크기 */
+    color: #003399;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 28px; /* 기본 크기 */
+    font-weight: bold;
+    color: #003399;
+}
+
+h3 {
+    font-size: 20px; /* 기본 크기 */
+    font-weight: bold;
+    color: #003399;
+}
+
+p, body {
+    font-size: 16px;
+    line-height: 1.6; 
+}
+
+/* Tours Section */
+.tours {
+    background-color: #fff;
+    padding: 50px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.tour-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.tour-item {
+    width: 45%; /* 모바일에서 크기 조정 */
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #dddddd; 
+    box-sizing: border-box;
+}
+
+.tour-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* About Section */
+#about {
+    background-color: #eef; 
+    padding: 50px;
+    text-align: center;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px;
+    text-align: center;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact input, #contact textarea {
+    width: 80%; /* 모바일에서 넓이 증가 */
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#contact button {
+    background-color: #003399;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#contact button:hover {
+    background-color: #0055cc;
+}
+
+/* Footer */
+footer {
+    background-color: #003399;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer a img {
+    width: 24px;
+    height: 24px;
+}
+
+footer img:hover {
+    opacity: 0.7;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .carousel {
+        height: 300px; /* 모바일 크기 */
+    }
+
+    h1 {
+        font-size: 28px; /* 모바일 크기 */
+    }
+
+    h2 {
+        font-size: 24px; /* 모바일 크기 */
+    }
+
+    h3 {
+        font-size: 18px; /* 모바일 크기 */
+    }
+
+    .tour-item {
+        width: 90%; /* 모바일에서 한 줄에 표시 */
+    }
+
+    #contact input, #contact textarea {
+        width: 90%; /* 입력칸 넓이 증가 */
+    }
+}
+>>>>>>> 9abba703a4acd5b7aa128b05dd2d9a8cb8002375
