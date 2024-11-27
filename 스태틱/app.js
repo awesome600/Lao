@@ -8,3 +8,11 @@ function changeImage() {
 }
 
 setInterval(changeImage, 3000); // Changes image every 3 seconds
+
+// app.js
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('.nav-menu');
+
+menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
