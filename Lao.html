@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko">
-	<head>
-	    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Discover Best Places in Korea with Us</title>
+    <title>라오스 여행사</title>
     <link rel="stylesheet" href="스태틱/styles.css">
-    <script src="스태틱/app.js"></script>
-	</head>
-	<body>
-	
-        <!-- Header Section -->
+    <script src="스태틱/app.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
     <header>
         <div class="logo">
-            <a href="Lao.html" style="color: white; text-decoration: none;">
-                <span>여행사<sup>®</sup></span>
-            </a>
+            <a href="Lao.html">라오스 여행사<sup>®</sup></a>
         </div>
         <nav>
             <ul class="nav-menu">
@@ -28,83 +24,63 @@
         </nav>
     </header>
 
-    <!-- Image Carousel Section -->
+    <!-- Hero Section -->
     <section id="home">
         <div class="carousel">
             <img src="이미지/롱비엔1.jpg" alt="롱비엔 CC 이미지 1" class="carousel-image active">
             <img src="이미지/롱비엔2.jpg" alt="롱비엔 CC 이미지 2" class="carousel-image">
             <img src="이미지/롱비엔3.jpg" alt="롱비엔 CC 이미지 3" class="carousel-image">
-            <img src="이미지/롱비엔4.jpg" alt="롱비엔 CC 이미지 4" class="carousel-image">
-            <img src="이미지/내부11.jpg" alt="호텔 이미지 1" class="carousel-image">
         </div>
-        <h1>라오스에서 최고의 장소를 찾아보세요</h1>
+        <h1>라오스 최고의 여행을 계획하세요!</h1>
     </section>
 
-    <!-- Tours -->
+    <!-- Tours Section -->
     <section id="tours" class="tours">
-        <h2>투어 안내</h2>
+        <h2>추천 투어</h2>
         <div class="tour-grid">
             <div class="tour-item">
                 <a href="롱비엔_cc.html">
-                    <img src="이미지/롱비엔1.jpg" alt="골프 투어">
-                    <h3>3박 5일</h3>
+                    <img src="이미지/롱비엔1.jpg" alt="롱비엔 CC">
+                    <h3>롱비엔 CC 투어</h3>
                 </a>
-                <p>롱비엔 CC에서 세계적 수준의 골프를 즐겨보세요.</p>
-	   </div>
+                <p>세계적인 골프를 경험해보세요.</p>
+            </div>
             <div class="tour-item">
                 <a href="luxury-hotel.html">
                     <img src="이미지/내부26.jpg" alt="럭셔리 호텔">
                     <h3>럭셔리 호텔 숙박</h3>
                 </a>
-                <p>비엔티안의 최고급 호텔에서 편안한 휴식을 즐기세요.</p>
+                <p>최고급 호텔에서의 특별한 하루를 즐기세요.</p>
             </div>
         </div>
     </section>
 
-    <!-- About Us Section -->
+    <!-- About Us -->
     <section id="about">
         <h2>회사 소개</h2>
-        <p>
-            저희 여행사는 라오스에서 잊을 수 없는 여행 경험을 제공합니다. 조용한 골프장부터 고급 숙박까지, 2010년부터 최상의 서비스를 보장해왔습니다.
-        </p>
+        <p>저희는 라오스에서 최고의 여행 경험을 제공합니다. 2010년부터 신뢰와 품질을 바탕으로 서비스를 제공하고 있습니다.</p>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
         <h2>문의하기</h2>
-        <form id="contact-form" action="#" method="POST">
+        <form id="contact-form">
             <label for="name">이름</label>
             <input type="text" id="name" name="name" required>
             <label for="email">이메일</label>
             <input type="email" id="email" name="email" required>
             <label for="message">메시지</label>
             <textarea id="message" name="message" required></textarea>
-            <button type="submit">메시지 보내기</button>
+            <button type="submit">보내기</button>
         </form>
-        <div id="confirmation-message" style="display: none; margin-top: 20px; color: green; font-weight: bold;">
-            곧 연락드리겠습니다!
-        </div>
+        <div id="confirmation-message" style="display: none; margin-top: 20px; color: green;">문의해 주셔서 감사합니다!</div>
     </section>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer>
         <p>소셜 미디어에서 우리를 팔로우하세요:</p>
-        <a href="https://open.kakao.com"><img src="Lao/이미지/카톡.png" alt="오픈채팅"></a>
+        <a href="https://open.kakao.com"><img src="이미지/카톡.png" alt="카카오 오픈 채팅"></a>
         <p>© 2024 라오스 여행사</p>
     </footer>
-
-    <!-- JavaScript for Carousel -->
-    <script src="스태틱/app.js"></script>
-
-    <script>
-        document.getElementById("contact-form").addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevent the form from actually submitting
-
-            // Hide the form and show the confirmation message
-            document.getElementById("contact-form").style.display = "none";
-            document.getElementById("confirmation-message").style.display = "block";
-        });
-    </script>
-
 </body>
 </html>
